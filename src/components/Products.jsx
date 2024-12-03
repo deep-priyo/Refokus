@@ -42,7 +42,7 @@ const Products = () => {
     return (
         <div>
             {products.map((val, i) => (
-                <Product title={val.title} description={val.description} live={val.live} casee={val.case} />
+                <Product key={i} title={val.title} description={val.description} live={val.live} casee={val.case} />
             ))}
 
         </div>
