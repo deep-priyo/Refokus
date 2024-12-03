@@ -21,7 +21,7 @@ const Navbar = () => {
                         {elem}</a>)}
                 </div>
             </div>
-            <Button />
+            <Button name="Get Started"/>
         </div>
     )
 }
