@@ -1,5 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Product from "./Product.jsx";
+import {motion} from "motion/react";
+import arqitel from "../assets/Videos/arqitel.mp4";
+import ttr from "../assets/Videos/ttr.mp4";
+import yir from "../assets/Videos/yir.mp4";
+import yahoo from "../assets/Videos/yahoo.mp4";
+import rainfall from "../assets/Videos/rainfall.mp4";
 
 const Products = () => {
     const products=[
@@ -39,12 +45,77 @@ const Products = () => {
             case: true,
         },
     ]
+    const [position, setPosition] = useState(23);
+    const mover= (val)=>{
+        setPosition(val*23)
+    }
     return (
-        <div className="mt-32">
+        <div className="mt-32 relative">
             {products.map((val, i) => (
-                <Product key={i} title={val.title} description={val.description} live={val.live} casee={val.case} />
+                <Product key={i} title={val.title} description={val.description} live={val.live} casee={val.case} mover={mover} count={i}/>
             ))}
-
+            <div className='absolute top-0 w-full h-full  pointer-events-none'>
+                <motion.div initial={{y: position, x: "-50%"}}
+                            animate={{y: position + `rem`, x: "-50%"}}
+                            transition={{ease: [0.76, 0, 0.24, 1] , duration: 0.5}}
+                            className='window w-[32rem] h-[23rem]  left-[44%] absolute   overflow-hidden'>
+                    <motion.div animate={{y: -position + `rem`}}
+                                transition={{ease: [0.76, 0, 0.24, 1], duration: 0.5}}
+                                className='w-full h-full '>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={arqitel}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{y: -position + `rem`}}
+                                transition={{ease: [0.76, 0, 0.24, 1], duration: 0.5}}
+                                className='w-full h-full '>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={ttr}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{y: -position + `rem`}}
+                                transition={{ease: [0.76, 0, 0.24, 1], duration: 0.5}}
+                                className='w-full h-full '>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={yir}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{y: -position + `rem`}}
+                                transition={{ease: [0.76, 0, 0.24, 1], duration: 0.6}}
+                                className='w-full h-full '>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={yahoo}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{y: -position + `rem`}}
+                                transition={{ease: [0.76, 0, 0.24, 1], duration: 0.5}}
+                                className='w-full h-full '>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={rainfall}
+                        ></video>
+                    </motion.div>
+                </motion.div>
+            </div>
         </div>
     )
 }
