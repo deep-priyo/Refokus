@@ -1,7 +1,9 @@
-# Refokus Clone 🎨
+# Refokus Clone 🎨 
 
 ## 🚀 Project Overview
 Refokus Clone is a dynamic web application built with modern React technologies. This project showcases my expertise in building interactive, animated UI components and leveraging advanced libraries for enhanced user experiences.
+
+## [🔗View Demo](https://refokusreinterpret.netlify.app/)
 
 ## 🛠️ Technologies Used
 - **React** for building the core application structure
@@ -41,7 +43,7 @@ Refokus Clone is a dynamic web application built with modern React technologies.
 - Adding more interactive features like modals and popups
 - Extending accessibility features for better usability
 
-## [🔗View Demo](https://refokusreinterpret.netlify.app/)
+
 
 
 
