@@ -41,8 +41,8 @@ Refokus Clone is a dynamic web application built with modern React technologies.
 - Adding more interactive features like modals and popups
 - Extending accessibility features for better usability
 
-## 🔗 Demo 
-- **Live Demo**: [link-to-live-demo]
+## [🔗View Demo](https://refokusreinterpret.netlify.app/)
+
 
 
 ---
