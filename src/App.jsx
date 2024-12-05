@@ -5,10 +5,13 @@ import Products from "./components/Products.jsx";
 import Marquees from "./components/Marquees.jsx";
 import Cards from "./components/Cards.jsx";
 import Footer from "./components/Footer.jsx";
+import LocomotiveScroll from "locomotive-scroll";
 
 
 
 const App = () => {
+    const locomotiveScroll =new LocomotiveScroll();
+
     return (
         <div className="w-full h-full bg-zinc-900 font-satoshi text-white">
             <Navbar />
