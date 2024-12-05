@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import {motion, useMotionValueEvent} from "motion/react"
 import { useScroll } from "motion/react"
 const Work = () => {
     const [images, setImages] = useState([
