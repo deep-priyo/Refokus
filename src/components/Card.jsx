@@ -5,11 +5,13 @@ const Card = ({width, start, para,hover}) => {
     return (
         <div className={`${width} ${hover} relative bg-zinc-800 p-5 rounded-xl`}>
             <div className='w-full'>
-                <div className='w-full flex justify-between items-center'>
-                    <h3>one heading</h3>
+                <div className='w-full text-sm text-zinc-500 flex justify-between items-center'>
+                    {para && <h3 >Up Next: Culture</h3>}
+                    {!para && <h3>Get in Touch</h3>}
                     <IoIosArrowRoundForward/>
                 </div>
-                <h1 className='text-3xl font-medium mt-5'>whateva heading</h1>
+                {para && <h1 className='text-3xl font-medium mt-5'>Who we are</h1>}
+                {!para && <h1 className='text-3xl font-medium mt-5'>Let's get to it, together.</h1>}
             </div>
             <div className='downelem w-full mt-60 '>
                 {start && (<><h1 className="text-6xl font-semibold tracking-tight leading-none">Start a Project</h1>
@@ -17,8 +19,7 @@ const Card = ({width, start, para,hover}) => {
 
 
                 {para && (
-                    <p className=" absolute bottom-5 text-sm text-zinc-700 font-medium ">lorem lorem lkorem fjdshf
-                        hdsjfh hdfj dsf</p>)}
+                    <p className=" absolute bottom-5 text-sm text-zinc-700 font-medium ">Explore what drives our team</p>)}
 
             </div>
         </div>
